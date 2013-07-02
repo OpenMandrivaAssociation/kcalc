@@ -1,6 +1,6 @@
 Name:		kcalc
 Summary:	Do scientific calculations
-Version:	4.10.4
+Version:	4.10.5
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
@@ -37,6 +37,9 @@ the many functions available.
 %makeinstall_std -C build
 
 %changelog
+* Wed Jul 03 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.5-1
+- New version 4.10.5
+
 * Wed Jun 05 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.4-1
 - New version 4.10.4
 
