@@ -8,6 +8,8 @@ URL:		http://utils.kde.org/projects/kcalc/
 Source0:	ftp://ftp.kde.org/pub/kde/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	kdelibs4-devel
 BuildRequires:	gmp-devel
+BuildRequires:	cmake(ECM)
+BuildRequires:	ninja
 
 %description
 KCalc is a calculator which offers many more mathematical functions
@@ -30,11 +32,11 @@ the many functions available.
 %setup -q
 
 %build
-%cmake_kde4
-%make
+%cmake_kde5
+ninja
 
 %install
-%makeinstall_std -C build
+DESTDIR="%{buildroot}" ninja -C build install
 
 %changelog
 * Tue Nov 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.3-1
