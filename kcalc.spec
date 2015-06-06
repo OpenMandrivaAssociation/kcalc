@@ -24,13 +24,14 @@ keyboard accelerators and modes in the handbook to learn more about
 the many functions available.
 
 %files
-%{_kde_appsdir}/kcalc
-%{_kde_appsdir}/kconf_update
-%{_kde_bindir}/kcalc
-%{_kde_applicationsdir}/kcalc.desktop
-%{_kde_datadir}/config.kcfg/kcalc.kcfg
-%{_kde_docdir}/HTML/*/kcalc
-%{_kde_libdir}/libkdeinit4_kcalc.so
+%{_bindir}/kcalc
+%{_libdir}/libkdeinit5_kcalc.so
+%{_datadir}/applications/org.kde.kcalc.desktop
+%{_datadir}/config.kcfg/kcalc.kcfg
+%{_docdir}/HTML/*/kcalc
+%{_datadir}/kcalc/scienceconstants.xml
+%{_datadir}/kconf_update/kcalcrc.upd
+%{_datadir}/kxmlgui5/kcalc/kcalcui.rc
 
 #----------------------------------------------------------------------
 
