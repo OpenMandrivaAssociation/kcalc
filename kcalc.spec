@@ -15,6 +15,7 @@ BuildRequires:	cmake(KF5I18n)
 BuildRequires:	cmake(KF5Init)
 BuildRequires:	cmake(KF5Notifications)
 BuildRequires:	cmake(KF5XmlGui)
+BuildRequires:	gmp-devel
 
 %description
 KCalc is a calculator which offers many more mathematical functions
