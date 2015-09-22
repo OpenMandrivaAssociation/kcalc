@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kcalc-15.08.0.tar.xz: 4a0b1d04bbc27b4fb64f057f5843e46aeaa5d044
+sources:
+  kcalc-15.08.1.tar.xz: b08c7672094d4781ee2031c16b64cca52714a8e1
