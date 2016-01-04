@@ -7,7 +7,7 @@ License:	LGPLv2
 URL:		http://utils.kde.org/projects/kcalc/
 Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	pkgconfig(Qt5Core)
-BuildRequires:	pkgconfig(Qt5Widgets
+BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5Config)
 BuildRequires:	cmake(KF5ConfigWidgets)
