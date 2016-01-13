@@ -1,7 +1,7 @@
 Name:		kcalc
 Summary:	Do scientific calculations
-Version:	15.12.0
-Release:	2
+Version:	15.12.1
+Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 URL:		http://utils.kde.org/projects/kcalc/
