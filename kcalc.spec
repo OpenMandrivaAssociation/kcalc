@@ -1,11 +1,13 @@
 Name:		kcalc
 Summary:	Do scientific calculations
 Version:	15.12.3
-Release:	2
+Release:	3
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 URL:		http://utils.kde.org/projects/kcalc/
 Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
+# (tpg) https://bugs.kde.org/show_bug.cgi?id=360105#c8
+Patch0:		kcalc-15.12.3-fix-start-with-qt56.patch
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	cmake(ECM)
@@ -39,6 +41,7 @@ the many functions available.
 
 %prep
 %setup -q
+%apply_patches
 %cmake_kde5
 
 %build
