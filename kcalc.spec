@@ -1,6 +1,6 @@
 Name:		kcalc
 Summary:	Do scientific calculations
-Version:	17.03.80
+Version:	17.04.0
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
@@ -26,12 +26,11 @@ than meet the eye on a first glance. Please study the section on
 keyboard accelerators and modes in the handbook to learn more about
 the many functions available.
 
-%files
+%files -f %{name}.lang
 %{_bindir}/kcalc
 %{_libdir}/libkdeinit5_kcalc.so
 %{_datadir}/applications/org.kde.kcalc.desktop
 %{_datadir}/config.kcfg/kcalc.kcfg
-%{_docdir}/HTML/*/kcalc
 %{_datadir}/kcalc/scienceconstants.xml
 %{_datadir}/kconf_update/kcalcrc.upd
 %{_datadir}/kxmlgui5/kcalc/kcalcui.rc
@@ -49,3 +48,4 @@ the many functions available.
 
 %install
 %ninja_install -C build
+%find_lang %{name} --with-html
