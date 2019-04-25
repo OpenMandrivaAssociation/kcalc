@@ -18,6 +18,7 @@ BuildRequires:	cmake(KF5I18n)
 BuildRequires:	cmake(KF5Init)
 BuildRequires:	cmake(KF5Notifications)
 BuildRequires:	cmake(KF5XmlGui)
+BuildRequires:	cmake(KF5Crash)
 BuildRequires:	gmp-devel
 
 %description
@@ -39,8 +40,7 @@ the many functions available.
 #----------------------------------------------------------------------
 
 %prep
-%setup -q
-%apply_patches
+%autosetup -p1
 %cmake_kde5
 
 %build
