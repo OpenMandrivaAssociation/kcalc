@@ -1,7 +1,7 @@
 Name:		kcalc
 Summary:	Do scientific calculations
-Version:	19.12.2
-Release:	2
+Version:	19.12.3
+Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
