@@ -1,6 +1,6 @@
 Name:		kcalc
 Summary:	Do scientific calculations
-Version:	21.03.80
+Version:	21.03.90
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
