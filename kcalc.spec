@@ -1,6 +1,6 @@
 Name:		kcalc
 Summary:	Do scientific calculations
-Version:	21.08.3
+Version:	21.12.0
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
@@ -34,7 +34,6 @@ the many functions available.
 #{_libdir}/libkdeinit5_kcalc.so
 %{_datadir}/applications/org.kde.kcalc.desktop
 %{_datadir}/config.kcfg/kcalc.kcfg
-%{_datadir}/kcalc/scienceconstants.xml
 %{_datadir}/kconf_update/kcalcrc.upd
 #{_datadir}/kxmlgui5/kcalc/kcalcui.rc
 %{_datadir}/metainfo/org.kde.kcalc.appdata.xml
