@@ -1,13 +1,12 @@
 Name:		kcalc
 Summary:	Do scientific calculations
-Version:	22.08.3
+Version:	22.12.0
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 URL:		http://utils.kde.org/projects/kcalc/
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
-Patch0:		kcalc-19.04.1-menuentry.patch
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	cmake(ECM)
@@ -31,12 +30,11 @@ the many functions available.
 
 %files -f %{name}.lang
 %{_bindir}/kcalc
-#{_libdir}/libkdeinit5_kcalc.so
 %{_datadir}/applications/org.kde.kcalc.desktop
 %{_datadir}/config.kcfg/kcalc.kcfg
 %{_datadir}/kconf_update/kcalcrc.upd
-#{_datadir}/kxmlgui5/kcalc/kcalcui.rc
 %{_datadir}/metainfo/org.kde.kcalc.appdata.xml
+%{_datadir}/kglobalaccel/org.kde.kcalc.desktop
 
 #----------------------------------------------------------------------
 
