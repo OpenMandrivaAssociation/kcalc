@@ -1,24 +1,28 @@
+%define git 20230816
 Name:		kcalc
 Summary:	Do scientific calculations
-Version:	23.04.3
-Release:	1
+Version:	23.07.90
+Release:	0.%{git}.0
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 URL:		http://utils.kde.org/projects/kcalc/
-Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
-BuildRequires:	pkgconfig(Qt5Core)
-BuildRequires:	pkgconfig(Qt5Widgets)
+#Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
+Source0:  https://invent.kde.org/utilities/kcalc/-/archive/master/kcalc-master.tar.bz2
+
+BuildRequires:  cmake(Qt6)
+BuildRequires:	cmake(Qt6Core)
+BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(ECM)
-BuildRequires:	cmake(KF5Config)
-BuildRequires:	cmake(KF5ConfigWidgets)
-BuildRequires:	cmake(KF5DocTools)
-BuildRequires:	cmake(KF5GuiAddons)
-BuildRequires:	cmake(KF5I18n)
-BuildRequires:	cmake(KF5Init)
-BuildRequires:	cmake(KF5Notifications)
-BuildRequires:	cmake(KF5XmlGui)
-BuildRequires:	cmake(KF5Crash)
+BuildRequires:	cmake(KF6Config)
+BuildRequires:	cmake(KF6ConfigWidgets)
+BuildRequires:	cmake(KF6DocTools)
+BuildRequires:	cmake(KF6GuiAddons)
+BuildRequires:	cmake(KF6I18n)
+BuildRequires:	cmake(KF6Init)
+BuildRequires:	cmake(KF6Notifications)
+BuildRequires:	cmake(KF6XmlGui)
+BuildRequires:	cmake(KF6Crash)
 BuildRequires:	gmp-devel
 BuildRequires:	mpfr-devel
 
@@ -40,7 +44,7 @@ the many functions available.
 
 %prep
 %autosetup -p1
-%cmake_kde5
+%cmake  -G Ninja
 
 %build
 %ninja -C build
