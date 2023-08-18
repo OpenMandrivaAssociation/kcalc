@@ -43,7 +43,7 @@ the many functions available.
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -n plasma6-%{name}-master -p1
+%autosetup -n kcalc-master -p1
 %cmake  \
           -DBUILD_WITH_QT6:BOOL=ON \
           -G Ninja
