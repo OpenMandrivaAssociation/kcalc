@@ -32,7 +32,7 @@ than meet the eye on a first glance. Please study the section on
 keyboard accelerators and modes in the handbook to learn more about
 the many functions available.
 
-%files -f %{name}.lang
+%files -f kcalc.lang
 %{_bindir}/kcalc
 %{_datadir}/applications/org.kde.kcalc.desktop
 %{_datadir}/config.kcfg/kcalc.kcfg
@@ -53,4 +53,4 @@ the many functions available.
 
 %install
 %ninja_install -C build
-%find_lang %{name} --with-html
+%find_lang kcalc --with-html
