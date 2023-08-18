@@ -42,7 +42,7 @@ the many functions available.
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -p1
+%autosetup -n %{name}-master -p1
 %cmake  -G Ninja
 
 %build
