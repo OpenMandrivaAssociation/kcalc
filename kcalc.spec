@@ -43,7 +43,9 @@ the many functions available.
 
 %prep
 %autosetup -n %{name}-master -p1
-%cmake  -G Ninja
+%cmake  \
+          -DBUILD_WITH_QT6:BOOL=ON \
+          -G Ninja
 
 %build
 %ninja -C build
