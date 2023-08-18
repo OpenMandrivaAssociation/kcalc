@@ -1,14 +1,19 @@
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 %define git 20230816
+
 Name:		plasma6-kcalc
 Summary:	Do scientific calculations
 Version:	23.07.90
-Release:	0.%{git}.0
+Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 URL:		http://utils.kde.org/projects/kcalc/
-#Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
-Source0:  https://invent.kde.org/utilities/kcalc/-/archive/master/kcalc-master.tar.bz2
+%if 0%{?git:1}
+Source0:	https://invent.kde.org/utilities/kcalc/-/archive/master/kcalc-master.tar.bz2#/kcalc-%{git}.tar.bz2
+%else
+Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
+%endif
 
 BuildRequires:  cmake(Qt6)
 BuildRequires:	cmake(Qt6Core)
@@ -43,7 +48,7 @@ the many functions available.
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -n kcalc-master -p1
+%autosetup -n kcalc-%{?git:master}%{!?git:%{version}} -p1
 %cmake  \
           -DBUILD_WITH_QT6:BOOL=ON \
           -G Ninja
