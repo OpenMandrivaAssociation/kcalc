@@ -3,7 +3,7 @@
 
 Name:		plasma6-kcalc
 Summary:	Do scientific calculations
-Version:	24.01.85
+Version:	24.01.90
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
