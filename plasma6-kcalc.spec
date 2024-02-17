@@ -1,15 +1,17 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
-#define git 20231104
+%define git 20240217
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
 Name:		plasma6-kcalc
 Summary:	Do scientific calculations
-Version:	24.01.95
+Version:	24.01.96
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 URL:		http://utils.kde.org/projects/kcalc/
 %if 0%{?git:1}
-Source0:	https://invent.kde.org/utilities/kcalc/-/archive/master/kcalc-master.tar.bz2#/kcalc-%{git}.tar.bz2
+Source0:	https://invent.kde.org/utilities/kcalc/-/archive/%{gitbranch}/kcalc-%{gitbranchd}.tar.bz2#/kcalc-%{git}.tar.bz2
 %else
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kcalc-%{version}.tar.xz
 %endif
@@ -47,7 +49,7 @@ the many functions available.
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -n kcalc-%{?git:master}%{!?git:%{version}} -p1
+%autosetup -n kcalc-%{?git:%{gitbranchd}}%{!?git:%{version}} -p1
 %cmake  \
           -DBUILD_WITH_QT6:BOOL=ON \
           -G Ninja
