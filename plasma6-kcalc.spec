@@ -18,11 +18,12 @@ Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kcalc-
 
 BuildRequires:  cmake(Qt6)
 BuildRequires:	cmake(Qt6Core)
+BuildRequires:  cmake(Qt6Core5Compat)
 BuildRequires:	cmake(Qt6Widgets)
+BuildRequires:	cmake(Qt6Test)
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF6Config)
 BuildRequires:	cmake(KF6ConfigWidgets)
-BuildRequires:  cmake(Qt6Core5Compat)
 BuildRequires:	cmake(KF6DocTools)
 BuildRequires:	cmake(KF6GuiAddons)
 BuildRequires:	cmake(KF6I18n)
