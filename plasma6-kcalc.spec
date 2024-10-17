@@ -9,7 +9,7 @@ Version:	24.08.2
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
-URL:		http://utils.kde.org/projects/kcalc/
+URL:		https://utils.kde.org/projects/kcalc/
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/utilities/kcalc/-/archive/%{gitbranch}/kcalc-%{gitbranchd}.tar.bz2#/kcalc-%{git}.tar.bz2
 %else
