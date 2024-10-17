@@ -5,7 +5,7 @@ Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-URL:		http://utils.kde.org/projects/kcalc/
+URL:		https://utils.kde.org/projects/kcalc/
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Widgets)
