@@ -32,6 +32,7 @@ BuildRequires:	cmake(KF6XmlGui)
 BuildRequires:	cmake(KF6Crash)
 BuildRequires:	gmp-devel
 BuildRequires:	mpfr-devel
+BuildRequires:	libmpc-devel
 
 %description
 KCalc is a calculator which offers many more mathematical functions
