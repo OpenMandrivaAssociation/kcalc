@@ -5,7 +5,7 @@
 
 Name:		kcalc
 Summary:	Do scientific calculations
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
@@ -34,6 +34,11 @@ BuildRequires:	gmp-devel
 BuildRequires:	mpfr-devel
 BuildRequires:	libmpc-devel
 
+%rename plasma6-kcalc
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
 %description
 KCalc is a calculator which offers many more mathematical functions
 than meet the eye on a first glance. Please study the section on
@@ -47,18 +52,3 @@ the many functions available.
 %{_datadir}/kconf_update/kcalcrc.upd
 %{_datadir}/metainfo/org.kde.kcalc.appdata.xml
 %{_datadir}/kglobalaccel/org.kde.kcalc.desktop
-
-#----------------------------------------------------------------------
-
-%prep
-%autosetup -n kcalc-%{?git:%{gitbranchd}}%{!?git:%{version}} -p1
-%cmake  \
-          -DBUILD_WITH_QT6:BOOL=ON \
-          -G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-%find_lang kcalc --with-html
