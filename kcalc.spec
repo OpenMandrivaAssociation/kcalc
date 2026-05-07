@@ -5,7 +5,7 @@
 
 Name:		kcalc
 Summary:	Do scientific calculations
-Version:	26.04.0
+Version:	26.04.1
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
